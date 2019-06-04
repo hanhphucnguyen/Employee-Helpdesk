@@ -1,0 +1,42 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif, sans-serif;
+    font-size: 16px;
+}
+
+/*=====*/
+.image-header img {
+    height: 200px;
+    width: auto;
+}
+
+.status-wrapper {
+    font-weight: 600;
+    color: #333;
+}
+
+.status-wrapper span {
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.status-wrapper span.error {
+    background-color: #E53935;
+    color: #fff;
+}
+
+.status-wrapper span.success {
+    background-color: #66BB6A;
+    color: #fff;
+}
+
+.bg-dark, .bg-secondary {
+    background-color: #333 !important;
+}
+
+.btn {
+    border-radius: 5px;
+    background-color: #3781cc;
+    color: white;
+}

@@ -1,0 +1,128 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case2 - Call</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+    <link href="data:;base64,iVBORw0KGgo=">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="">Case #2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/home.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="employeefullCRUD.html">Employee</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/employeecall.html">Call<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report.html">Report</a>
+                </li>
+            </ul>
+            <div class="col-8 text-right p-3" style="color:white"> <h5>v2.0</h5></div>
+        </div>
+        <div class="form-group mt-2 mr-2">
+            <input type="text" class="from-control" id="srch" placeholder="Search" />
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center image-header mb-3" style="top:40px; position:relative;">
+                    <img src="img/call.jpg" alt="emp_photo" class="image">
+                    <h1>Calls</h1>
+                    <h5>v2.0</h5>
+                </div>
+            </div>
+        </div>
+        <div class="justify-content-center align-items-center row mt-5">
+            <div class="list-group col-12" id="callList"></div>
+        </div>
+    </div>
+
+    <form id="CallModalForm" name="CallModalForm" method="post" action="">
+        <div class="modal fade text-center mr-3" data-backdrop="static" id="theModal">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header d-block">
+                        <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <div class="modal-title text-center" id="modaltitle"></div>
+                        <div class="modal-title text-center"><input type="text" readonly="readonly" style="border:0px; font-family:Tahoma; text-align:center" id="selectedemployee" /> </div>
+
+                    </div>
+                    <div class="modal-body">
+                        <div class="mx-4 my-4">
+                            <div class="card">
+                                <div class="card-header text-center">
+                                    Call Information v2.0
+                                </div>
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Problem:</div>
+                                        <div class="col-8"><select id="ddlProblems" name="ddlProblems" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Employee:</div>
+                                        <div class="col-8"><select id="ddlEmployees" name="ddlEmployees" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Technician:</div>
+                                        <div class="col-8"><select id="ddlTechnicians" name="ddlTechnicians" class="form-control"></select></div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Date Opened:</div>
+                                        <div class="col-8 text-left" id="dateOpenedLbl"></div>
+                                        <input id="dateOpened" type="hidden" />
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Date Closed:</div>
+                                        <div class="col-8 text-left" id="dateClosedLbl"></div>
+                                        <input id="dateClosed" type="hidden" />
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Close Call:</div>
+                                        <div class="col-8 text-left"><input type="checkbox" id="checkBoxClose" /></div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-4 text-left" style="font-weight:bold">Note:</div>
+                                        <div class="col-8 text-left">
+                                            <textarea id="noteBox" name="noteBox" rows="4" cols="40"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-footer text-center">
+                        <input type="button" class="btn btn-secondary" value="Update" id="actionbutton" />
+                        <input type="button" data-toggle="confirmation" id="deletebutton" data-placement="right" class="btn btn-primary btn-outline-warning" value="delete" />
+                        <div class="text-left mt-3 mb-2" id="modalstatus"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/jquery.validate.min.js"></script>
+    <script src="Scripts//popper.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/bootstrap-confirmation.min.js"></script>
+    <script src="Scripts/employeecall.js"></script>
+</body>
+</html>

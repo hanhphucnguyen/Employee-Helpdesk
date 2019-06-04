@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Case 2 - Home</title>
+    <meta charset="utf-8" />
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/custom.css" rel="stylesheet" />
+    <link href="data:;base64,iVBORw0KGgo=">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Case#2</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link active" href="/home.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employeefullCRUD.html">Employee</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/employeecall.html">Call</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report.html">Report</a>
+                </li>
+            </ul>
+            <span style="color:#fff;">
+                V2.0
+            </span>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="text-center image-header mb-3" style="top:40px; position:relative;">
+                    <img src="img/helpdesk.jpg" alt="helpdesk" />
+                    <h1>Help Desk</h1>
+                    <h5>v2.0</h5>
+                    <div class="panel-body" style="top:75px;position:relative;">
+                        <a class="btn btn-default" href="/employee.html#theModal" data-toggle="modal" data-target="#theModal" role="button">Look up Employee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade text-center" data-backdrop="static" id="theModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header d-block">
+                    <button type="button" class="close float-right" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h1 class="modal-title text-center" id="sampleModalLabel">Employee Look Up</h1>
+                </div>
+                <div class="modal-body">
+                    <div class="mx-4 my-4">
+                        <div class="card">
+                            <div class="card-header text-center">
+                                Employee Information
+                            </div>
+                            <div class="card-body text-left">
+                                <div class="row ml-1 align-items-baseline">
+                                    <div class="col-12">
+                                        <input type="text" placeholder="enter last name" id="TextBoxLastname" class="form-control my-2" />
+                                    </div>
+                                </div>
+                                <div class="row ml-1 align-items-baseline">
+                                    <div class="col-3" style="font-weight:bold">Title:</div>
+                                    <div class="col-8" id="title"></div>
+                                </div>
+                                <div class="row ml-1 align-items-baseline">
+                                    <div class="col-3" style="font-weight:bold">First:</div>
+                                    <div class="col-8" id="firstname"></div>
+                                </div>
+                                <div class="row ml-1 align-items-baseline">
+                                    <div class="col-3" style="font-weight:bold">Phone:</div>
+                                    <div class="col-8" id="phone"></div>
+                                </div>
+                                <div class="row ml-1 align-items-baseline">
+                                    <div class="col-3" style="font-weight:bold">Email:</div>
+                                    <div class="col-8" id="email"></div>
+                                </div>
+                            </div>
+                            <div class="card-footer text-center">
+                                <input type="button" value="Find Employee" id="getbutton" />
+                                <div class="status-wrapper text-center mt-3 mb-2">
+                                    <span id="status"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script src="Scripts/popper.min.js"></script>
+    <script src="Scripts/bootstrap.bundle.min.js"></script>
+    <script src="Scripts/employeelookup.js"></script>
+</body>
+</html>

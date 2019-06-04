@@ -1,0 +1,2 @@
+Z:\Projects\Casestudy2\CaseStudyTests\obj\Debug\CaseStudyTests.csprojAssemblyReference.cache
+Z:\Projects\Casestudy2\CaseStudyTests\obj\Debug\CaseStudyTests.csproj.CoreCompileInputs.cache
