@@ -27,7 +27,7 @@ The layers of the solution are to be architected as follows:
 • Repository
 • Entity classes
 5. Data Layer (HelpdeskDB Database)
-• Employees T able
-• Departments T able
-• Calls T able
-• Problem T able
+• Employees Table
+• Departments Table
+• Calls Table
+• Problem Table
